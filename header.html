@@ -1,0 +1,15 @@
+<nav class="container">
+  <h1 class="col-xs-12 col-sm-10">{{ title }}</h1>
+  <div class="btn-group col-xs-12 col-sm-2" role="group">
+  <button type="button" class="col-xs-12 col-sm-4 btn btn-default btn-sm" title="Info">
+    <span class="glyphicon glyphicon-info-sign"></span> 
+  </button>
+  <button type="button" class="col-xs-12 col-sm-4 btn btn-default btn-sm" title="List View">
+    <span class="glyphicon glyphicon-list-alt"></span> 
+  </button>
+  <button ng-click="toggleFullScreen()" type="button" class="col-xs-12 col-sm-4 btn btn-default btn-sm" title="Fullscreen View">
+    <span class="glyphicon glyphicon-fullscreen"></span>
+  </button>
+</div>
+</nav>
+<p ng-repeat="p in intro">{{ p }}</p>
