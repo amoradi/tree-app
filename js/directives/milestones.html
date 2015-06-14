@@ -1,0 +1,13 @@
+<dl ng-repeat="milestone in milestones">
+	<dt>{{ $index + 1 }} {{ milestone.name }}</dt>
+	<dd>
+	  <ul>
+	    <li ng-repeat="point in milestone.points">
+			<span class="sub-milestone" ng-if="point.submilestone">{{ point.submilestone }}</span>
+			<span class="point" data-card="{{ point.scripture | lowercase }}">{{point.text}}
+				<span>{{ point.scripture }}</span>
+			</span>
+	  	</li> 
+	  </ul>
+	</dd>
+</dl>
