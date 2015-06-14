@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <title>The Tree of Moses' Life</title>
+  <link rel="stylesheet" href="design/css/bootstrap.min.css">
+  <link rel="stylesheet" href="design/css/style.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
+</head>
+<body ng-app="myApp" >
+<header>
+  <nav class="container">
+    <h1 class="col-xs-12 col-sm-10">{{ title }}</h1>
+    <div class="btn-group col-xs-12 col-sm-2" role="group">
+    <button type="button" class="col-xs-12 col-sm-4 btn btn-default btn-sm">
+      <span class="glyphicon glyphicon-info-sign"></span> 
+    </button>
+    <button type="button" class="col-xs-12 col-sm-4 btn btn-default btn-sm">
+      <span class="glyphicon glyphicon-list-alt"></span> 
+    </button>
+    
+    <button ng-click="toggleFullScreen()" type="button" class="col-xs-12 col-sm-4 btn btn-default btn-sm">
+      <span class="glyphicon glyphicon-fullscreen"></span>
+    </button>
+  </div>
+  </nav>
+  <p ng-repeat="p in intro">{{ p }}</p>
+</header>
+<main>
+  <section id="stage" fullscreen="isFullscreen">dfghdgfh
+    <div ng-controller="AlertController">
+      <alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</alert>
+      <button class='btn btn-default' ng-click="addAlert()">Add Alert</button>
+    </div>
+  </section>
+  <section id="key">
+    <h2>{{ keyTitle }}</h2>
+    <div class="key-list">
+      <dl ng-repeat="milestone in milestones">
+        <dt>{{ $index + 1 }} {{ milestone.name }}</dt>
+        <dd>
+          <ul>
+            <li ng-repeat="point in milestone.points">
+              <span class="sub-milestone" ng-if="point.submilestone">{{ point.submilestone }}</span>
+              <span class="point" data-card="{{ point.scripture | lowercase }}">{{point.text}} <span>{{ point.scripture }}</span></span></li> 
+          </ul>
+        </dd>
+      </dl>
+    </div>
+  </section>
+</main>
+<footer>
+  <nav class="container">
+    <div class="col-xs-12 col-sm-8">&numero;4307 Tree of Moses' Life<div><a href="">relevantmatters.org</a></div></div>
+    <div class="btn-group col-xs-12 col-sm-4" role="group">
+    
+    <button type="button" class="col-xs-12 col-sm-6 btn btn-default btn-sm">
+      Facebook 
+    </button>
+    
+    <button type="button" class="col-xs-12 col-sm-6 btn btn-default btn-sm">
+      Twitter
+    </button>
+  </div>
+  </nav>
+</footer>
+
+<!-- Modules -->
+<script src="js/modules/ui-bootstrap-tpls-0.13.0.min.js"></script>
+<script src="js/modules/angular-fullscreen.js"></script>
+<script src="js/app.js"></script>
+
+<!-- Controllers -->
+<script src="js/controllers/MainController.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+{
+	"milestones": [
+		{
+			"name": 'family',
+			"points": [
+				{
+					text: 'Father, Amram',
+					scripture: 'Ex.6.20'
+					
+				},
+				{
+					text: 'Father, Amram',
+					scripture: 'Ex.12.29'
+					
+				},
+				{
+					text: 'Father, Amram',
+					scripture: 'Ex.7.20'	
+				}
+			]
+		},
+		{
+			"name": 'family',
+			"points": [
+				{
+					text: 'Father, Amram',
+					scripture: 'Ex.6.20'
+					
+				},
+				{
+					text: 'Father, Amram',
+					scripture: 'Ex.12.29'
+					
+				},
+				{
+					text: 'Father, Amram',
+					scripture: 'Ex.7.20'	
+				}
+			]
+		}
+		 
+
+
+		/*,
+			sub-milestone: {
+				name: '',
+				points: [
+					[string, scripture],
+					[string, scripture],
+					[string, scripture],
+					[string, scripture]
+				]
+			}
+		},
+		// milestone 2
+		{},
+		// milestone 3
+		{},
+		// milestone 4
+		{}*/
+
+	]
+}
