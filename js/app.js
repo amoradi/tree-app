@@ -1,1 +1,1 @@
-var app = angular.module("myApp", ['FBAngular', 'ui.bootstrap']);
+var app = angular.module("myApp", ['FBAngular']);
