@@ -1,5 +1,5 @@
 <dl ng-repeat="milestone in milestones">
-	<dt>{{ $index + 1 }} {{ milestone.name }}</dt>
+	<dt>{{ convertToRomanNumeral($index + 1) }} {{ milestone.name }}</dt>
 	<dd>
 	  <ul>
 	    <li ng-repeat="point in milestone.points">
