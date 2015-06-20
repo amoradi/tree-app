@@ -3,6 +3,7 @@ body {
 	color: #444;
 	padding: 0;
 	margin: 0;
+	overflow-x: hidden;
 }
 .container {
 	width: 100%;
@@ -10,11 +11,14 @@ body {
 #stage {
 	background: #fff;
 	width: 100%;
+	height: 100%;
+	padding: 81px 0;
+	text-align: left;
+}
+milestones {
+	display: block;
 	max-width: 760px;
 	min-height: 700px;
-	height: 100%;
-	padding: 81px 35px;
-	text-align: left;
 }
 header {
 	position: fixed;
@@ -67,4 +71,46 @@ dt, li {
 dt {
 	font-weight: bold;
 	padding: 10px 0 3px;
+}
+
+/*
+ * =========================================================================== 
+ * == Move Slides on Stage w/CSS3 Transitions w/o Using 'position: absoute' ==
+ * ===========================================================================
+*/
+
+main {
+	width: 100%;
+	overflow: hidden;
+}
+
+#stage { /* $('#stage').on('click', function() { $(this).toggleClass('.slideChange');});*/
+	width: 200%;
+	overflow: hidden;
+	position: relative;
+	left: 0;
+	top: 0;
+	-webkit-transition: all 500ms ease-out;
+    -moz-transition: all 500ms ease-out;
+    -o-transition: all 500ms ease-out;
+    transition: all 500ms ease-out;
+    box-sizing: border-box;
+    moz=box=sizing: border-box;
+}
+
+#stage.slideChange { 
+	left: -100%;
+	-webkit-transition: all 500ms ease-out;
+    -moz-transition: all 500ms ease-out;
+    -o-transition: all 500ms ease-out;
+    transition: all 500ms ease-out;
+}
+
+.slides {
+	width: 50%;
+	display: inline-block;
+	vertical-align: top;
+	padding: 0 30px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
 }
