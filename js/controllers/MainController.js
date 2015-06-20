@@ -5,7 +5,7 @@ app.controller('MainController', ['$scope', function($scope) {
 
     // toggle fullscreen mode
     $scope.toggleFullScreen = function() {
-        $scope.isFullscreen = !$scope.isFullscreen;
+        $scope.isFullscreen = !$scope.isFullscreen;         
     };
 
     // change slide view
