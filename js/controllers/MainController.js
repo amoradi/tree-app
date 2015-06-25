@@ -3,6 +3,8 @@ app.controller('MainController', ['$scope', function($scope) {
 	// Initially, do not go into full screen
     $scope.isFullscreen = false;
 
+    var toggle = false;
+
     // toggle fullscreen mode
     $scope.toggleFullScreen = function() {
         $scope.isFullscreen = !$scope.isFullscreen;         
@@ -12,7 +14,27 @@ app.controller('MainController', ['$scope', function($scope) {
     $scope.toggleSlideView = function() {    	
     	var stage = angular.element(document.querySelector('#stage'));
     	stage.toggleClass('slideChange');
-    }
+
+    	
+    	if (!toggle) {
+    		angular.element(document.querySelector('#toggleView')).html('<img src="design/img/view.png" />&nbsp;&nbsp;image view');
+    		toggle = true;
+    	}
+    	else {
+    		angular.element(document.querySelector('#toggleView')).html('<img src="design/img/view.png" />&nbsp;&nbsp;list view');
+    		toggle = false;
+    	}
+    };
+
+    // info view
+    $scope.showInfo = function() {
+    
+        angular.element(document.querySelectorAll('#infoModal, #percentScrn')).addClass('show');        
+    };
+
+    $scope.hideModal = function() {
+        angular.element(document.querySelectorAll('#infoModal, #modal, #percentScrn')).removeClass('show');        
+    };
 	
 
 	$scope.title = 'Tree of Moses\' Life';
