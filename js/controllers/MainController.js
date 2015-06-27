@@ -6,8 +6,9 @@ app.controller('MainController', ['$scope', function($scope) {
     var toggle = false;
 
     // toggle fullscreen mode
-    $scope.toggleFullScreen = function() {
-        $scope.isFullscreen = !$scope.isFullscreen;         
+    $scope.toggleFullScreen = function(e) {
+        $scope.isFullscreen = !$scope.isFullscreen;
+        angular.element('.nav-links span').blur();         
     };
 
     // change slide view
@@ -17,11 +18,11 @@ app.controller('MainController', ['$scope', function($scope) {
 
     	
     	if (!toggle) {
-    		angular.element(document.querySelector('#toggleView')).html('<img src="design/img/view.png" />&nbsp;&nbsp;image view');
+    		angular.element(document.querySelector('#toggleView')).html('<span class="faux-border"></span><span class="faux-border"></span>image view');
     		toggle = true;
     	}
     	else {
-    		angular.element(document.querySelector('#toggleView')).html('<img src="design/img/view.png" />&nbsp;&nbsp;list view');
+    		angular.element(document.querySelector('#toggleView')).html('<span class="faux-border"></span>list view');
     		toggle = false;
     	}
     };
@@ -37,7 +38,7 @@ app.controller('MainController', ['$scope', function($scope) {
     };
 	
 
-	$scope.title = 'Tree of Moses\' Life';
+	$scope.title = 'A Tree of Moses\' Life';
 	$scope.intro = ['The tree presents an outline study of the history of Moses beginning with his parentage and family, and ending with his reappearance after death at the transfiguration of Christ.', 'By comparing the numbers in the circles, which represent fruit on the tree, with the corresponding numbers given by the key, the main facts of this great life can be traced.'];
 
 	$scope.keyTitle = 'The Key to The Tree of Moses\' Life';

@@ -1,13 +1,13 @@
 <nav class="container">
-  <h1 id="logoTitle" class="col-xs-12 col-sm-6">{{ title }}</h1>
+  <h1 tabindex="1" id="logoTitle" class="col-xs-12 col-sm-6">{{ title }}</h1>
   <div class="nav-links col-xs-12 col-sm-6 text-right">
   
-    <span tabindex="1" id="infoView" ng-click="showInfo()">
-      <img src="design/img/info.png" />&nbsp;&nbsp;info
-    </span><span id="toggleView" ng-click="toggleSlideView()">
-      <img src="design/img/view.png" />&nbsp;&nbsp;list view
-    </span><span ng-click="toggleFullScreen()">
-      <img src="design/img/fullscrn.png" />&nbsp;&nbsp;full screen
+    <span tabindex="2" id="infoView" ng-click="showInfo()"><span class="faux-border"></span>
+      <!-- <img src="design/img/info.png" />&nbsp;&nbsp; -->info
+    </span><span tabindex="3" id="toggleView" ng-click="toggleSlideView()"><span class="faux-border"></span>
+      <!-- <img src="design/img/view.png" />&nbsp;&nbsp; -->list view
+    </span><span tabindex="4" ng-click="toggleFullScreen()"><span class="faux-border"></span>
+      <!-- <img src="design/img/fullscrn.png" />&nbsp;&nbsp; -->full screen
     </span>
 
   <!-- <button type="button" class="col-xs-12 col-sm-4 btn btn-default btn-sm" title="Info">
