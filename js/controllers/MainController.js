@@ -8,14 +8,15 @@ app.controller('MainController', ['$scope', function($scope) {
     // toggle fullscreen mode
     $scope.toggleFullScreen = function(e) {
         $scope.isFullscreen = !$scope.isFullscreen;
-        angular.element('.nav-links span').blur();         
+        window.document.getElementById('tgFullScrn').blur(); // unfocus
     };
 
-    // change slide view
+    // change stage view
     $scope.toggleSlideView = function() {    	
     	var stage = angular.element(document.querySelector('#stage'));
     	stage.toggleClass('slideChange');
 
+    	window.document.getElementById('tgSlideView').blur(); // unfocus
     	
     	if (!toggle) {
     		angular.element(document.querySelector('#toggleView')).html('<span class="faux-border"></span><span class="faux-border"></span>image view');
@@ -27,12 +28,17 @@ app.controller('MainController', ['$scope', function($scope) {
     	}
     };
 
-    // info view
+    // show info modal
     $scope.showInfo = function() {
-    
         angular.element(document.querySelectorAll('#infoModal, #percentScrn')).addClass('show');        
     };
 
+    // show modal
+    $scope.showModal = function() {
+        angular.element(document.querySelectorAll('#modal, #percentScrn')).addClass('show');        
+    };
+
+    // hide modals & percent scrn
     $scope.hideModal = function() {
         angular.element(document.querySelectorAll('#infoModal, #modal, #percentScrn')).removeClass('show');        
     };

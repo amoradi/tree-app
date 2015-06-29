@@ -4,7 +4,7 @@
 	  <ul>
 	    <li ng-repeat="point in milestone.points">
 			<span class="sub-milestone" ng-if="point.submilestone">{{ point.submilestone }}</span>
-			<span class="point" data-card="{{ point.scripture | lowercase }}">{{point.text}}
+			<span class="point" ng-click="showModal()" data-card="{{ point.scripture | lowercase }}">{{point.text}}
 				<span>{{ point.scripture }}</span>
 			</span>
 	  	</li> 
