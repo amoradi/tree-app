@@ -473,6 +473,7 @@ header h1 {
 	font-size: 1.8rem;
 	margin: 0;
 	text-transform: uppercase;
+	color: #111;
 }
 #logoTitle {
 	line-height: 60px;
@@ -497,7 +498,6 @@ footer {
     margin: 0 10px;
 }
 h1 {
-	color: #111;
 	letter-spacing: 1px;
 }
 dl {
@@ -612,12 +612,12 @@ dt {
 	text-align: left;
 	font-size: 40px;
 	font-size: 4rem;
-	padding: 0 20px;
+	padding: 0 40px;
 	overflow: hidden;
 	border: 2px solid #111;
 	height: 80%;
 	opacity: 100%;
-	overflow-y: auto;
+	overflow: hidden;
 	-webkit-box-shadow: 0px -8px 39px 0px rgba(0,0,0,0.75);
 	-moz-box-shadow: 0px -8px 39px 0px rgba(0,0,0,0.75);
 	box-shadow: 0px -8px 39px 0px rgba(0,0,0,0.75);
@@ -628,7 +628,7 @@ dt {
     transition: all 200ms ease-out;
 }
 #modal {
-	text-align: center;
+	text-align: left;
 }
 
 #modal, #infoModal p {
@@ -638,14 +638,14 @@ dt {
 }
 
 #modal blockquote {
-	padding: 20px 20px 40px;
-	height: 70%;
+	padding: 5px 20px 40px 0;
+	height: 50%;
 	overflow-y: scroll;
-	margin: 0;
+	margin: 0 0 40px;
 	border: none;
 }
 
-.infoTitle {
+.infoTitle, .modalMilestone {
     color: #111;    
     margin-bottom: 30px;
     padding-top: 15px;
@@ -658,7 +658,7 @@ dt {
 	padding-right: 2px;
 }
 
-.infoTitle:before {
+.infoTitle:before, .modalMilestone:before {
 	content: "";
 	display: block;
 	height: 4px;
@@ -668,6 +668,30 @@ dt {
 	-webkit-border-radius: 7px;
 	-moz-border-radius: 7px;
 	border-radius: 7px;
+}
+
+.modalMilestone {
+	margin-bottom: 10px;
+
+}
+#modal h1 {
+	margin-top: 50px;
+	font-size: 22px;
+	font-size: 2.2rem;
+	font-style: italic;
+	letter-spacing: 0px;
+}
+
+#modal h3 {
+	font-size: 19px;
+	font-size: 1.9rem;
+	margin: 0;
+}
+
+#modal .scriptureRef {
+	display: block;
+	padding: 20px;
+	text-align: right;
 }
 
 .exit {
@@ -700,17 +724,29 @@ dt {
 	position: absolute;
 	bottom: 0;
 	width: 100%;
-	padding: 20px 0;
+	
 	left: 0;
 	right: 0;
 	background-color: #eee;
 	font-size: 28px;
 	font-size: 2.8rem;
+	text-align: center;
+}
+
+#modalControls > * {
+	padding: 20px 0;
+	border-top: 1px solid #ccc;
+	font-size: 22px;
+	font-size: 2.2rem;
 }
 
 #modalControls > *:hover {
 	cursor: pointer;
 	color: red;
+}
+
+#modalControls > *:first-child, #modalControls > *:first-child + span {
+	border-right: 1px solid #ccc;
 }
 
 #percentScrn {

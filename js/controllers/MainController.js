@@ -16,10 +16,10 @@ app.controller('MainController', ['$scope', function($scope) {
     	var stage = angular.element(document.querySelector('#stage'));
     	stage.toggleClass('slideChange');
 
-    	window.document.getElementById('tgSlideView').blur(); // unfocus
+    	window.document.getElementById('toggleView').blur(); // unfocus
     	
     	if (!toggle) {
-    		angular.element(document.querySelector('#toggleView')).html('<span class="faux-border"></span><span class="faux-border"></span>image view');
+    		angular.element(document.querySelector('#toggleView')).html('<span class="faux-border"></span>image view');
     		toggle = true;
     	}
     	else {
